@@ -2,7 +2,7 @@
 *.pot
 *.pyc
 __pycache__/
-btre/settings.py
+/btre/settings.py
 db.sqlite3
 db.sqlite3-journal
 /media
