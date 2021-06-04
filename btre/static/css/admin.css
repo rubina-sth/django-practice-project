@@ -1,0 +1,38 @@
+#header {
+  background: #10284e;
+  color: white;
+  min-height: 10vh;
+}
+
+#branding .brand-heading {
+  color: white;
+}
+
+a:link,
+a:visited {
+  color: #10284e;
+}
+
+div.breadcrumbs {
+  background: rgba(32, 134, 107, 0.8);
+  color: #10284e;
+}
+
+div.breadcrumbs a {
+  color: black;
+}
+
+.module h2,
+.module caption,
+.inline-group h2 {
+  background: rgba(32, 134, 107, 0.8);
+}
+
+.button,
+input[type="submit"],
+input[type="button"],
+.submit-row input,
+a.button {
+  background: rgba(32, 134, 107, 0.8);
+  color: white;
+}
