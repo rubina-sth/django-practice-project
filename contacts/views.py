@@ -29,13 +29,13 @@ def contact(request):
                           email=email, phone=phone, message=message, user_id=user_id)
         contact.save()
 
-        send_mail(
-            'Property Listing Inquiry',
-            'You have an inquiry for '+listing+'.',
-            settings.EMAIL_HOST_USER,
-            [realtor_email, '19samik68@gmail.com'],
-            fail_silently=False
-        )
+        # send_mail(
+        #     'Property Listing Inquiry',
+        #     'You have an inquiry for '+listing+'.',
+        #     settings.EMAIL_HOST_USER,
+        #     [realtor_email],
+        #     fail_silently=False
+        # )
 
         messages.success(
             request, 'Made an inquiry successfully. Realtor will get back to you as soon as possible!')

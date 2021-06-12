@@ -3,6 +3,8 @@ from django.shortcuts import redirect, render
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
+from contacts.models import Contact
+from django.contrib.auth.decorators import login_required
 
 
 def register(request):
@@ -59,5 +61,11 @@ def user_logout(request):
     return redirect('index')
 
 
+@login_required(login_url='login')
 def dashboard(request):
-    return render(request, 'accounts/dashboard.html')
+    inquired_listings = Contact.objects.order_by(
+        'contact_date').filter(user_id=request.user.id)
+    context = {
+        'inquired_listings': inquired_listings
+    }
+    return render(request, 'accounts/dashboard.html', context)
